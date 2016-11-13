@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>主页</title>
+		<meta charset="utf-8">
+	</head>
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>
+	<body>
+		<center>
+			<include file='menu'/>
+			<a href="/home/index/logout">退出</a>
+			<form action='/home/index/load' method='post' id='get'>
+				<input type='hidden' name='id' value="{$list.id}"><br>
+				名<input type='text' name='name' value="{$list.name}"><br>
+				性别<input type='radio' name='sex' value='{$list.sex}' {$list['sex'] == 2? checked: ''}>男
+				<input type='radio' name='sex' value='{$list.sex}' {$list['sex'] == 1? checked: ''}>女<br>
+				班级<input type='text' name='class' value="{$list.class}"><br>
+				分数<input type='text' name='score' value="{$list.score}"><br>
+				<input type='submit' value="确认修改">
+			</form>
+		
+		</center>	
+	</body>
+	
+</html>
